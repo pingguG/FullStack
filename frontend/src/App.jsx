@@ -1,34 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Layout from "./components/Layout";
+import WelcomeMessage from "./components/WelcomeMessage"; // 이전에 만든 환영 메시지
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    // <Layout> 태그 안에 들어가는 모든 내용이
+    // Layout.jsx의 {children} 위치에 들어가게 됩니다.
+    <Layout>
+      {/* 여기가 메인 콘텐츠 영역입니다. */}
+      <WelcomeMessage />
+      <h1>동아리 소개 페이지</h1>
+      <p>여기에 동아리 소개 내용이 들어갈 예정입니다.</p>
+    </Layout>
   );
 }
 
