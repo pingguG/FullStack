@@ -1,6 +1,19 @@
 .homePage-container {
   width: 100%;
-  background-color: #fdabab;
+  height: 500vh;
+  background-image: linear-gradient(
+    to bottom right,
+    /* 👈 그라데이션 방향 설정 (좌상단에서 우하단으로) */ #166167,
+    /* 👈 시작 색상 (기존 색상) */ #41158f /* 👈 끝 색상 (더 밝은 색상 예시) */
+  );
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.homePage-main {
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

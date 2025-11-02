@@ -1,7 +1,60 @@
 .home-section01 {
-  background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
-  width: 100%;
-  height: 100vh;
+  width: 1400px;
+  border: solid 1px red; /* 구분선 */
+}
+/* 1. Flex 컨테이너 설정 (이전에 div에 적용했던 스타일) */
+.home-section01 .row-item {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+/* 2. 카드 설정 (고정 너비 600px) */
+.section-card {
+  /* flex: <grow> <shrink> <basis> */
+  flex: 0 0 600px; /* ⭐ 카드는 늘어나지도(0), 줄어들지도(0) 않으며, 기본 크기는 600px로 고정 */
+  /* width: 600px; 속성은 flex-basis에 의해 오버라이드되므로, 삭제해도 되지만, flex 속성만 사용하는 것이 가장 명확합니다. */
+  height: 480px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* 3. 텍스트 영역 설정 (남은 공간 모두 채우기) */
+.text-area {
+  flex-grow: 1; /* ⭐ 남은 공간을 모두 차지하도록 확장 */
+}
+
+.section-card {
+  width: 600px;
+  height: 480px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+
+  /* 🌟 수정된 부분: 하얀색(255, 255, 255)에 투명도 10%(0.1) 적용 */
+  border: solid 1px rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0, 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* 첫 번째 순서: 카드(왼쪽) | 텍스트(오른쪽) */
+.default-order .section-card {
+  margin-right: 50px; /* 카드와 텍스트 사이 간격 */
+}
+.default-order .text-area {
+  text-align: left; /* 텍스트를 왼쪽에 정렬 */
+}
+
+/* 두 번째 순서: 텍스트(왼쪽) | 카드(오른쪽) */
+.reverse-order {
+  flex-direction: row-reverse; /* ⭐ 요소의 배치 순서를 뒤집음 */
+}
+.reverse-order .section-card {
+  margin-left: 50px; /* 카드와 텍스트 사이 간격 */
+}
+.reverse-order .text-area {
+  text-align: right; /* 텍스트를 오른쪽에 정렬 */
 }
