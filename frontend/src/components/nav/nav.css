@@ -1,0 +1,31 @@
+.main-nav {
+  width: auto;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0);
+
+  /*자식 요소들을 플렉스로 만든다.*/
+  display: flex;
+
+  /*콘텐츠를 양쪽으로 정렬시킨다*/
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 40px;
+}
+
+.main-nav a {
+  /* 링크의 기본 밑줄을 제거합니다. */
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  font-weight: 600;
+
+  /* 마우스 호버 효과 (사용자가 클릭할 때 피드백 제공) */
+  transition: color 0.3s ease; /* 색상 변화를 0.3초 동안 부드럽게 합니다. */
+}
+
+/* 3. 호버 시 스타일 */
+.main-nav a:hover {
+  color: #007bff; /* 마우스를 올리면 파란색으로 변합니다. */
+}

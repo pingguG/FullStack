@@ -1,0 +1,6 @@
+.homePage-container {
+  width: 100%;
+  background-color: #fdabab;
+  display: flex;
+  flex-direction: column;
+}
