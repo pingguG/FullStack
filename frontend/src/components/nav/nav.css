@@ -1,7 +1,7 @@
 .main-nav {
   width: auto;
   height: 100px;
-  background-color: #00001e;
+  background-color: rgba(255, 255, 255, 0);
 
   /*자식 요소들을 플렉스로 만든다.*/
   display: flex;
@@ -17,7 +17,7 @@
 .main-nav a {
   /* 링크의 기본 밑줄을 제거합니다. */
   text-decoration: none;
-  color: #333;
+  color: rgba(255, 255, 255, 1);
   font-size: 20px;
   font-weight: 600;
 
